@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holidays, Weekends, and Working Days</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    canvas {
+        max-width: 400px;
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="pieChart" width="400" height="400"></canvas>
+<canvas id="barChart" width="400" height="400"></canvas>
+<canvas id="lineChart" width="400" height="400"></canvas>
+
+<script>
+    // Data for pie chart
+    var pieData = {
+        labels: ['Holidays', 'Weekends', 'Working Days'],
+        datasets: [{
+            data: [5, 52, 260], // Placeholder data, replace with actual data
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.8)', // Holidays (Red)
+                'rgba(54, 162, 235, 0.8)', // Weekends (Blue)
+                'rgba(255, 206, 86, 0.8)', // Working Days (Yellow)
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    // Data for bar chart
+    var barData = {
+        labels: ['Holidays', 'Weekends', 'Working Days'],
+        datasets: [{
+            label: 'Number of Days',
+            data: [5, 52, 260], // Placeholder data, replace with actual data
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.8)', // Holidays (Red)
+                'rgba(54, 162, 235, 0.8)', // Weekends (Blue)
+                'rgba(255, 206, 86, 0.8)', // Working Days (Yellow)
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    // Data for line graph
+    var lineData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+            label: 'Number of Days',
+            data: [5, 5, 6, 7, 8, 8, 8, 8, 8, 7, 6, 5], // Placeholder data, replace with actual data
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    // Options for charts
+    var options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+            display: true,
+            text: 'Holidays, Weekends, and Working Days'
+        }
+    };
+
+    // Get canvas elements
+    var pieCtx = document.getElementById('pieChart').getContext('2d');
+    var barCtx = document.getElementById('barChart').getContext('2d');
+    var lineCtx = document.getElementById('lineChart').getContext('2d');
+
+    // Create pie chart
+    var pieChart = new Chart(pieCtx, {
+        type: 'pie',
+        data: pieData,
+        options: options
+    });
+
+    // Create bar chart
+    var barChart = new Chart(barCtx, {
+        type: 'bar',
+        data: barData,
+        options: options
+    });
+
+    // Create line graph
+    var lineChart = new Chart(lineCtx, {
+        type: 'line',
+        data: lineData,
+        options: options
+    });
+</script>
+
+</body>
+</html>

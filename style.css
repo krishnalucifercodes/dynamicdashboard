@@ -1,0 +1,122 @@
+/* Add your advanced CSS styles here */
+  /* Example styles */
+  body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  nav ul li.active {
+    font-weight: bold;
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  div {
+    margin-bottom: 30px;
+    flex: 100% 1 1; /* Adjust the width of sections as needed */
+  }
+
+  h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .status-card,
+  .device,
+  .chart-container {
+    background-color: #60ebf5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(245, 5, 5, 0.1);
+    margin-bottom: 20px;
+  }
+
+  canvas {
+    max-width: 100%;
+    height: auto;
+    background-color: #eff4f4;
+  }
+
+  .status-card h3,
+  .device h3,
+  .chart-container h2 {
+    margin-bottom: 10px;
+  }
+
+  .status-card p,
+  .device p {
+    margin-bottom: 5px;
+  }
+
+  .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .status.online {
+    background-color: #6bbf6b;
+    color: #fff;
+  }
+
+  .status.offline {
+    background-color: #d9534f;
+    color: #fff;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #performance-metrics {
+    text-align: center;
+}
+
+.chart-container {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(25, 226, 252, 0.1);
+    background-color: #f0f0f0; /* Placeholder color */
+    padding: 20px;
+}
+
+.chart-container canvas {
+    width: 200px;
+    height: 150px;
+}
